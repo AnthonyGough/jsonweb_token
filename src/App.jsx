@@ -1,14 +1,13 @@
 import React from "react";
 import { useState } from 'react';
-
+import {getPersonDetails} from "./utility.js";
 import "./App.css";
 const URL = `${import.meta.env.VITE_API_URL}/user/login`;
 
 function App() {
   const [buttonText, setButtonText] = useState("Login");
-
-  async function login() {    
-
+   async function login() {    
+  
     return await fetch(URL, {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       headers: {
@@ -24,11 +23,13 @@ function App() {
       })
       .catch((error) => console.log(error));
   };
+ 
 
   return (
     <div className="App">
       <h1>JWT Token Example</h1>
       <button onClick={login}>{buttonText}</button>
+      <button onClick={getPersonDetails}>Person Details</button>
     </div>
   );
 }
