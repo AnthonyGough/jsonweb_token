@@ -4,6 +4,13 @@
 
 **Environmental variables must start with VITE_ to be accessed using "import.meta.env.VITE_XXXXXXXXXX"**
 
+Note that node_modules will need to be installed - use instructions below
+
+## To Run Application
++ npm install
++ npm run dev
+
+
 
 
 
